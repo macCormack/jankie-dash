@@ -6,12 +6,12 @@
   "author": "Alicia Sykes <alicia@omg.lol> (https://aliciasykes.com)",
   "scripts": {
     "start": "node server",
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "pm2-start": "npx pm2 start server.js",
-    "build-watch": "vue-cli-service build --watch --mode production",
-    "build-and-start": "npm-run-all --parallel build-watch start",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "lint": "NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint",
+    "pm2-start": "NODE_OPTIONS=--openssl-legacy-provider && npx pm2 start server.js",
+    "build-watch": "NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --watch --mode production",
+    "build-and-start": "NODE_OPTIONS=--openssl-legacy-provider && npm-run-all --parallel build-watch start",
     "validate-config": "node services/config-validator",
     "health-check": "node services/healthcheck",
     "dependency-audit": "npx improved-yarn-audit --ignore-dev-deps"
@@ -30,6 +30,7 @@
     "keycloak-js": "^20.0.3",
     "register-service-worker": "^1.7.2",
     "remedial": "^1.0.8",
+    "rss-parser": "3.13.0",
     "rsup-progress": "^3.0.0",
     "simple-icons": "^7.19.0",
     "v-jsoneditor": "^1.4.5",
@@ -43,8 +44,7 @@
     "vue-select": "^3.20.2",
     "vue-swatches": "^2.1.1",
     "vue-toasted": "^1.1.28",
-    "vuex": "^3.6.2",
-    "rss-parser": "3.13.0"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@architect/sandbox": "^4.5.2",

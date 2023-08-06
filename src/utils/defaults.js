@@ -247,6 +247,7 @@ module.exports = {
     weather: 'https://api.openweathermap.org/data/2.5/weather',
     weatherForecast: 'https://api.openweathermap.org/data/2.5/forecast/daily',
     xkcdComic: 'https://xkcd.vercel.app/',
+    jankieGrow: 'https://api.pulsegrow.com/devices/15753',
   },
   /* URLs for web search engines */
   searchEngineUrls: {
